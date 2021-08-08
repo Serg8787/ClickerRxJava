@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CompetionFragment">
+
+    <TextView
+        android:id="@+id/tvLevel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="8dp"
+        android:text="Выберите уровень"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btSprint1Distance10sec"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="Sprint 10sec"
+        android:backgroundTint="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="@+id/tvLevel"
+        app:layout_constraintStart_toStartOf="@+id/tvLevel"
+        app:layout_constraintTop_toBottomOf="@+id/tvLevel" />
+
+    <Button
+        android:id="@+id/btMiddleDistance20sec"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Средняя дистанция 20 сек"
+        android:padding="4dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        app:layout_constraintEnd_toEndOf="@+id/btSprint1Distance10sec"
+        app:layout_constraintStart_toStartOf="@+id/btSprint1Distance10sec"
+        app:layout_constraintTop_toBottomOf="@+id/btSprint1Distance10sec" />
+
+    <Button
+        android:id="@+id/btLongDistanse30sec"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Длинная дистанция 30 сек"
+        android:padding="4dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        app:layout_constraintEnd_toEndOf="@+id/btMiddleDistance20sec"
+        app:layout_constraintStart_toStartOf="@+id/btMiddleDistance20sec"
+        app:layout_constraintTop_toBottomOf="@+id/btMiddleDistance20sec" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

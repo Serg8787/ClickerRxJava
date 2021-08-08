@@ -34,7 +34,7 @@ class CompetionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_competion, container, false)
+        return inflater.inflate(R.layout.fragment_new_competion, container, false)
     }
 
     companion object {

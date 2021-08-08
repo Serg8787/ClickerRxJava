@@ -32,7 +32,7 @@
         android:id="@+id/competionFragment"
         android:name="com.example.clicker.CompetionFragment"
         android:label="fragment_competion"
-        tools:layout="@layout/fragment_competion" >
+        tools:layout="@layout/fragment_new_competion" >
         <action
             android:id="@+id/action_competionFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
