@@ -35,13 +35,13 @@ class MainFragment : Fragment() {
 
         super.onViewCreated(view, savedInstanceState)
         tvAboutDeveloper.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_aboutDeveloperFragment2)}
+            findNavController().navigate(R.id.action_mainFragment_to_aboutDeveloperFragment)}
 
         tvCompetition.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_competionFragment2)
+            findNavController().navigate(R.id.action_mainFragment_to_competionFragment)
         }
         tvRecord.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_hallOfFameFragment2)
+            findNavController().navigate(R.id.action_mainFragment_to_hallOfFameFragment)
         }
 
     }

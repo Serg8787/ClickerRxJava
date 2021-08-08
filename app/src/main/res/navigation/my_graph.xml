@@ -11,13 +11,13 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainFragment_to_hallOfFameFragment2"
+            android:id="@+id/action_mainFragment_to_hallOfFameFragment"
             app:destination="@id/hallOfFameFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_aboutDeveloperFragment2"
+            android:id="@+id/action_mainFragment_to_aboutDeveloperFragment"
             app:destination="@id/aboutDeveloperFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_competionFragment2"
+            android:id="@+id/action_mainFragment_to_competionFragment"
             app:destination="@id/competionFragment" />
     </fragment>
     <fragment
@@ -25,7 +25,7 @@
         android:name="com.example.clicker.AboutDeveloperFragment"
         android:label="AboutDeveloperFragment" >
         <action
-            android:id="@+id/action_aboutDeveloperFragment2_to_mainFragment"
+            android:id="@+id/action_aboutDeveloperFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
     <fragment
@@ -34,7 +34,7 @@
         android:label="fragment_competion"
         tools:layout="@layout/fragment_competion" >
         <action
-            android:id="@+id/action_competionFragment2_to_mainFragment"
+            android:id="@+id/action_competionFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
     <fragment
@@ -43,7 +43,7 @@
         android:label="fragment_hall_of_fame"
         tools:layout="@layout/fragment_hall_of_fame" >
         <action
-            android:id="@+id/action_hallOfFameFragment2_to_mainFragment"
+            android:id="@+id/action_hallOfFameFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
 </navigation>
