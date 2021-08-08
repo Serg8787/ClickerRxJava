@@ -33,6 +33,9 @@
         android:name="com.example.clicker.CompetionFragment"
         android:label="fragment_competion"
         tools:layout="@layout/fragment_new_competion" >
+        <argument
+            android:name="level"
+            app:argType="integer" />
         <action
             android:id="@+id/action_competionFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
