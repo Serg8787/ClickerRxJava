@@ -6,46 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvCompetition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Новое соревнование"
-        android:textSize="30sp"
-        android:layout_marginTop="220dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvRecord"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Зал рекордов"
-        android:textSize="30sp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/tvCompetition"
-        app:layout_constraintStart_toStartOf="@+id/tvCompetition"
-        app:layout_constraintTop_toBottomOf="@+id/tvCompetition" />
 
-    <TextView
-        android:id="@+id/tvAboutDeveloper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About Developer"
-        android:textSize="30sp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/tvRecord"
-        app:layout_constraintStart_toStartOf="@+id/tvRecord"
-        app:layout_constraintTop_toBottomOf="@+id/tvRecord" />
-    <FrameLayout
-        android:id="@+id/flAboutDeveloper"
+    <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:id="@+id/main_container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/my_graph"
+        app:defaultNavHost="true"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

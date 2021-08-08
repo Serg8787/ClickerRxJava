@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainFragment">
+
+    <TextView
+        android:id="@+id/tvCompetition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Новое соревнование"
+        android:textSize="30sp"
+        android:layout_marginTop="220dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Зал рекордов"
+        android:textSize="30sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvCompetition"
+        app:layout_constraintStart_toStartOf="@+id/tvCompetition"
+        app:layout_constraintTop_toBottomOf="@+id/tvCompetition" />
+
+    <TextView
+        android:id="@+id/tvAboutDeveloper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="About Developer"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvRecord"
+        app:layout_constraintStart_toStartOf="@+id/tvRecord"
+        app:layout_constraintTop_toBottomOf="@+id/tvRecord" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
