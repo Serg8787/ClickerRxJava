@@ -56,4 +56,16 @@
         app:layout_constraintStart_toStartOf="@+id/btMiddleDistance20sec"
         app:layout_constraintTop_toBottomOf="@+id/btMiddleDistance20sec" />
 
+
+    <Button
+        android:id="@+id/btStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:layout_margin="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btLongDistanse30sec" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
