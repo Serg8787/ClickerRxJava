@@ -28,9 +28,7 @@ class MainFragment : Fragment() {
     ): View? {
 
         return inflater.inflate(R.layout.fragment_main, container, false)
-        tvAboutDeveloper.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_aboutDeveloperFragment2)
-        }
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
