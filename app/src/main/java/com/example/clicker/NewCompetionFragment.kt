@@ -37,6 +37,8 @@ class CompetionFragment : Fragment() {
 
         btSprint1Distance10sec.setOnClickListener {
             countLevel = 10
+            tvLevel.visibility = GONE
+            btStart.visibility = VISIBLE
             btSprint1Distance10sec.isEnabled = true
             btLongDistanse30sec.visibility = View.GONE
             btMiddleDistance20sec.visibility = GONE
@@ -44,12 +46,16 @@ class CompetionFragment : Fragment() {
         }
         btMiddleDistance20sec.setOnClickListener {
             countLevel = 20
+            tvLevel.visibility = GONE
+            btStart.visibility = VISIBLE
             btMiddleDistance20sec.isEnabled = true
             btSprint1Distance10sec.visibility = GONE
             btLongDistanse30sec.visibility = GONE
         }
         btLongDistanse30sec.setOnClickListener {
             countLevel = 30
+            tvLevel.visibility = GONE
+            btStart.visibility = VISIBLE
             btSprint1Distance10sec.visibility = GONE
             btLongDistanse30sec.visibility = GONE
             btLongDistanse30sec.isEnabled = true
