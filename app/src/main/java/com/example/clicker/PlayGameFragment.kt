@@ -38,25 +38,21 @@ class PlayGameFragment : Fragment() {
                 if(tvThreeToStart.text.equals("")){
                     val timer = ThreeToStart().getSeconds(countLevel).subscribeOn(Schedulers.newThread())
                         .observeOn(AndroidSchedulers.mainThread()).subscribe({
-                            tvTimer.text = "00 : " + it.toString()
+                            if(it<10){
+                                tvTimer.text = "00 : 0$it"
+                            } else{
+                                tvTimer.text = "00 : $it"
+                            }
                             Log.d("MyLog",it.toString())
                             clRoot.setOnClickListener {
                                 countResult++
                                 Log.d("MyLOGG",countResult.toString())
                             }
-                            if (tvTimer.text.equals("00 : 0")){
+                            if (tvTimer.text.equals("00 : 00")){
                                 tvResult.text = countResult.toString()
                             }
                         })
-
                 }
-
             })
-
-
-
     }
-
-
-
 }

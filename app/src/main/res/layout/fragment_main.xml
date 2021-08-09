@@ -3,17 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_bright"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainFragment">
 
     <TextView
         android:id="@+id/tvCompetition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Новое соревнование"
-        android:textSize="30sp"
-        android:layout_marginTop="220dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="148dp"
+        android:background="@drawable/background_orange"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="New \n competition"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.28"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,22 +27,35 @@
         android:id="@+id/tvRecord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Зал рекордов"
+        android:layout_marginStart="130dp"
+        android:background="@drawable/back_green"
+        android:gravity="center"
+        android:text="Hall of \nRecords"
         android:textSize="30sp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/tvCompetition"
+        android:textStyle="bold"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/tvCompetition"
-        app:layout_constraintTop_toBottomOf="@+id/tvCompetition" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48" />
 
     <TextView
         android:id="@+id/tvAboutDeveloper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="About Developer"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/back_red"
+        android:gravity="center"
+        android:text="About \n Developer"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvRecord"
-        app:layout_constraintStart_toStartOf="@+id/tvRecord"
-        app:layout_constraintTop_toBottomOf="@+id/tvRecord" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvRecord"
+        app:layout_constraintVertical_bias="0.01" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
