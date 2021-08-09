@@ -35,12 +35,17 @@ class PlayGameFragment : Fragment() {
         val ThreeToStart =ThreeToStart().getStr().subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvThreeToStart.text = it
-                tvTimer.text = "00 :" + countLevel
-                clRoot.setOnClickListener {
-                    countResult++
-                    Log.d("MyLOGG",countResult.toString())
+                if(tvThreeToStart.text.equals("")){
+                    tvTimer.text = "00 :" + countLevel
+                    clRoot.setOnClickListener {
+                        countResult++
+                        Log.d("MyLOGG",countResult.toString())
+                    }
                 }
+
             })
+
+
 
     }
 

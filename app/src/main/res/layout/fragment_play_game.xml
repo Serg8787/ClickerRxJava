@@ -22,7 +22,6 @@
 
     <TextView
         android:id="@+id/tvTimer"
-        android:text="00:00"
         android:textSize="30sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
