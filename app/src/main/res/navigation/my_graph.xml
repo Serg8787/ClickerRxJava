@@ -37,8 +37,8 @@
             android:name="level"
             app:argType="integer" />
         <action
-            android:id="@+id/action_competionFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_competionFragment_to_playGameFragment"
+            app:destination="@id/playGameFragment" />
     </fragment>
     <fragment
         android:id="@+id/hallOfFameFragment"
@@ -47,6 +47,15 @@
         tools:layout="@layout/fragment_hall_of_fame" >
         <action
             android:id="@+id/action_hallOfFameFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playGameFragment"
+        android:name="com.example.clicker.PlayGameFragment"
+        android:label="fragment_play_game"
+        tools:layout="@layout/fragment_play_game" >
+        <action
+            android:id="@+id/action_playGameFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
 </navigation>

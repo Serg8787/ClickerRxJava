@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_new_competion.*
@@ -54,13 +55,9 @@ class CompetionFragment : Fragment() {
             btMiddleDistance20sec.isEnabled = true
         }
         btStart.setOnClickListener {
-            clWithBtLevel.visibility = View.GONE
-            clResult.visibility = View.VISIBLE
 
-            val dispose =ThreeToStart().getStr().subscribeOn(Schedulers.newThread())
-                .observeOn(AndroidSchedulers.mainThread()).subscribe({
-                    tvThreeToStart.text = it
-                })
+
+           findNavController().navigate(R.id.action_competionFragment_to_playGameFragment)
 
 
         }
