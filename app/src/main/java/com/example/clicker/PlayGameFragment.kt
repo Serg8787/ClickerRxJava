@@ -29,11 +29,17 @@ class PlayGameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val countLevel = requireArguments().get("countLevel")
-        Log.d("MyLog",countLevel.toString())
+        var countResult:Int = 0
 
-        val dispose =ThreeToStart().getStr().subscribeOn(Schedulers.newThread())
+
+        val ThreeToStart =ThreeToStart().getStr().subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvThreeToStart.text = it
+                tvTimer.text = "00 :" + countLevel
+                clRoot.setOnClickListener {
+                    countResult++
+                    Log.d("MyLOGG",countResult.toString())
+                }
             })
 
     }
