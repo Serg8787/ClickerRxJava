@@ -57,6 +57,7 @@ class CompetionFragment : Fragment() {
 
         btStart.setOnClickListener {
             val args = Bundle().apply {
+                putInt("countLevel",countLevel)
             }
            findNavController().navigate(R.id.action_competionFragment_to_playGameFragment,args)
         }

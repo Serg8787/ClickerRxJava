@@ -32,14 +32,13 @@ class PlayGameFragment : Fragment() {
         var countResult:Int = 0
 
 
-        val ThreeToStart =ThreeToStart().getStr().subscribeOn(Schedulers.newThread())
+        val ThreeToStart =ThreeToStart().getStr().subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvThreeToStart.text = it
                 if(tvThreeToStart.text.equals("")){
                     tvThreeToStart.visibility = View.GONE
-                    val timer = ThreeToStart().getSeconds(countLevel).subscribeOn(Schedulers.newThread())
+                    val timer = ThreeToStart().getSeconds(countLevel).subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread()).subscribe({
-
                             if(it<10){
                                 tvTimer.text = "00 : 0$it"
                             } else{
