@@ -100,9 +100,9 @@
         android:id="@+id/clMiddleRecord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
+        android:layout_marginStart="148dp"
 
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="176dp"
         android:background="@drawable/back_record_middle"
         android:padding="5dp"
         app:layout_constraintStart_toStartOf="@+id/clSprinRecord"
@@ -190,26 +190,28 @@
         android:id="@+id/clLongRecord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="172dp"
         android:background="@drawable/back_record_long"
 
         android:padding="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/clMiddleRecord">
 
+
         <TextView
             android:id="@+id/tvRecordAllLong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:padding="4dp"
             android:text="Records of Sprint"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <TextView
             android:id="@+id/tvRecordLong1"
@@ -260,6 +262,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvRecordLong3" />
+
         <TextView
             android:id="@+id/tvRecordLong5"
             android:layout_width="0dp"
