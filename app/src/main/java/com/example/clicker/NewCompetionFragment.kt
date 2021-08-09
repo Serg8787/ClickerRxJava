@@ -37,10 +37,16 @@ class CompetionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btSprint1Distance10sec.setOnClickListener {
-            count = 1
+            count = 10
             btSprint1Distance10sec.isEnabled = true
             btLongDistanse30sec.isEnabled = false
             btMiddleDistance20sec.isEnabled = false
+        }
+        btMiddleDistance20sec.setOnClickListener {
+            count = 20
+            btSprint1Distance10sec.isEnabled = false
+            btLongDistanse30sec.isEnabled = false
+            btMiddleDistance20sec.isEnabled = true
         }
         btLongDistanse30sec.setOnClickListener {
             count = 30
@@ -48,16 +54,13 @@ class CompetionFragment : Fragment() {
             btLongDistanse30sec.isEnabled = true
             btMiddleDistance20sec.isEnabled = false
         }
-        btMiddleDistance20sec.setOnClickListener {
-            count = 30
-            btSprint1Distance10sec.isEnabled = false
-            btLongDistanse30sec.isEnabled = false
-            btMiddleDistance20sec.isEnabled = true
-        }
+
         btStart.setOnClickListener {
-
-
-           findNavController().navigate(R.id.action_competionFragment_to_playGameFragment)
+            val args = Bundle().apply {
+                putInt("countLevel",count)
+            }
+           findNavController().navigate(R.id.action_competionFragment_to_playGameFragment,args)
+            Log.d("MyLog",args.toString())
 
 
         }

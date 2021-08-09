@@ -15,7 +15,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="tvThreeToStart"/>
+        android:text="tvThreeToStart"
+        android:textSize="30sp"/>
+
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:text="00:00"
+        android:textSize="30sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvThreeToStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 

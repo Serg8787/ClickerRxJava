@@ -33,12 +33,12 @@
         android:name="com.example.clicker.CompetionFragment"
         android:label="fragment_competion"
         tools:layout="@layout/fragment_new_competion" >
-        <argument
             android:name="level"
             app:argType="integer" />
         <action
             android:id="@+id/action_competionFragment_to_playGameFragment"
             app:destination="@id/playGameFragment" />
+        <argument android:name="count" />
     </fragment>
     <fragment
         android:id="@+id/hallOfFameFragment"
