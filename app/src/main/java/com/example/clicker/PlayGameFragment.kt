@@ -36,8 +36,10 @@ class PlayGameFragment : Fragment() {
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvThreeToStart.text = it
                 if(tvThreeToStart.text.equals("")){
+                    tvThreeToStart.visibility = View.GONE
                     val timer = ThreeToStart().getSeconds(countLevel).subscribeOn(Schedulers.newThread())
                         .observeOn(AndroidSchedulers.mainThread()).subscribe({
+
                             if(it<10){
                                 tvTimer.text = "00 : 0$it"
                             } else{
@@ -49,7 +51,8 @@ class PlayGameFragment : Fragment() {
                                 Log.d("MyLOGG",countResult.toString())
                             }
                             if (tvTimer.text.equals("00 : 00")){
-                                tvResult.text = countResult.toString()
+                                tvResult.visibility = View.VISIBLE
+                                tvResult.text ="Your result\n${countResult}"
                             }
                         })
                 }

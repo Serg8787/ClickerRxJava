@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.fragment_new_competion.*
 class ThreeToStart {
     fun getStr(): Observable<String> {
         return ObservableCreate { subcrumber ->
-            val s = arrayListOf ("Three","Two","One","Start","")
+            val s = arrayListOf ("3","2","1","Start","")
             for ((i,value ) in s.withIndex()) {
                 subcrumber.onNext(value)
                 SystemClock.sleep(1000)

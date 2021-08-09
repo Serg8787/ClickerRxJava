@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.*
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -37,20 +38,22 @@ class CompetionFragment : Fragment() {
         btSprint1Distance10sec.setOnClickListener {
             countLevel = 10
             btSprint1Distance10sec.isEnabled = true
-            btLongDistanse30sec.isEnabled = false
-            btMiddleDistance20sec.isEnabled = false
+            btLongDistanse30sec.visibility = View.GONE
+            btMiddleDistance20sec.visibility = GONE
+
         }
         btMiddleDistance20sec.setOnClickListener {
             countLevel = 20
-            btSprint1Distance10sec.isEnabled = false
-            btLongDistanse30sec.isEnabled = false
             btMiddleDistance20sec.isEnabled = true
+            btSprint1Distance10sec.visibility = GONE
+            btLongDistanse30sec.visibility = GONE
         }
         btLongDistanse30sec.setOnClickListener {
             countLevel = 30
-            btSprint1Distance10sec.isEnabled = false
+            btSprint1Distance10sec.visibility = GONE
+            btLongDistanse30sec.visibility = GONE
             btLongDistanse30sec.isEnabled = true
-            btMiddleDistance20sec.isEnabled = false
+
         }
 
         btStart.setOnClickListener {
