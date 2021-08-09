@@ -53,15 +53,12 @@ class CompetionFragment : Fragment() {
             btSprint1Distance10sec.visibility = GONE
             btLongDistanse30sec.visibility = GONE
             btLongDistanse30sec.isEnabled = true
-
         }
 
         btStart.setOnClickListener {
             val args = Bundle().apply {
-                putInt("countLevel",countLevel)
             }
            findNavController().navigate(R.id.action_competionFragment_to_playGameFragment,args)
-            Log.d("MyLog",args.toString())
         }
 
 
