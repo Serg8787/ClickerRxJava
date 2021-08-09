@@ -1,15 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HallOfFameFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HallOfFameFragment"
+    android:background="@android:color/holo_green_light">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="зал рекордов"
-        android:textSize="35sp"/>
 
-</FrameLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSprinRecord"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/back_record_sprint"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvRecordAllSpint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Records of Sprint"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/tvRecordSprint1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Sprint1"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@id/tvRecordAllSpint"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/tvRecordAllSpint"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecordAllSpint" />
+
+        <TextView
+            android:id="@+id/tvRecordSprint2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sprint2"
+            android:textSize="30sp"
+            android:padding="5dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/tvRecordSprint1"
+            app:layout_constraintStart_toStartOf="@+id/tvRecordSprint1"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecordSprint1"/>
+        <TextView
+            android:id="@+id/tvRecordSprint3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sprint3"
+            android:textSize="30sp"
+            android:padding="5dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecordSprint2"/>
+
+        <TextView
+            android:id="@+id/tvRecordSprint4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sprint4"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvRecordSprint3"
+            app:layout_constraintStart_toStartOf="@+id/tvRecordSprint3"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecordSprint3"/>
+
+        <TextView
+            android:id="@+id/tvRecordSprint5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sprint5"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvRecordSprint4"
+            app:layout_constraintStart_toStartOf="@+id/tvRecordSprint4"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecordSprint4"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMiddleRecord"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="384dp"
+        android:background="@drawable/back_record_middle"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvRecordAllMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="4dp"
+            android:text="Records of Middle"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvRecordMiddle1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Middle1"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecordAllMiddle" />
+
+        <TextView
+            android:id="@+id/tvRecordMiddle2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Middle2"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecordMiddle1" />
+
+        <TextView
+            android:id="@+id/tvRecordMiddle3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Middle3"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecordMiddle2" />
+
+        <TextView
+            android:id="@+id/tvRecordMiddle4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Middle4"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecordMiddle3" />
+
+        <TextView
+            android:id="@+id/tvRecordMiddle5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Middle5"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecordMiddle4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

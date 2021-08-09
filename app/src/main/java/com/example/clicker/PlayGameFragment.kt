@@ -1,5 +1,7 @@
 package com.example.clicker
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,13 +13,9 @@ import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_play_game.*
 
 class PlayGameFragment : Fragment() {
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,6 +24,7 @@ class PlayGameFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_play_game, container, false)
     }
 
+    @SuppressLint("CommitPrefEdits")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val countLevel:Int = requireArguments().get("countLevel").toString().toInt()
@@ -44,14 +43,15 @@ class PlayGameFragment : Fragment() {
                             } else{
                                 tvTimer.text = "00 : $it"
                             }
-                            Log.d("MyLog",it.toString())
                             clRoot.setOnClickListener {
                                 countResult++
-                                Log.d("MyLOGG",countResult.toString())
                             }
                             if (tvTimer.text.equals("00 : 00")){
                                 tvResult.visibility = View.VISIBLE
                                 tvResult.text ="Your result\n${countResult}"
+                                val prefs = context?.getSharedPreferences("result",Context.MODE_PRIVATE)
+                                prefs?.edit()?.putInt("result",countResult)
+                                Log.d("MyLog",countResult.toString())
                             }
                         })
                 }
