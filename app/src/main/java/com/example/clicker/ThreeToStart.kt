@@ -20,6 +20,14 @@ class ThreeToStart {
             }
         }
     }
+    fun getSeconds(seconds:Int): Observable<Int> {
+        return ObservableCreate { subcrumber ->
+            for (i in seconds downTo 0) {
+                SystemClock.sleep(1000)
+                subcrumber.onNext(i)
+            }
+        }
+    }
 
 
 }
