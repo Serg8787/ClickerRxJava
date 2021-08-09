@@ -1,6 +1,7 @@
 package com.example.clicker
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -27,6 +28,8 @@ class PlayGameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val countLevel = requireArguments().get("countLevel")
+        Log.d("MyLog",countLevel.toString())
 
         val dispose =ThreeToStart().getStr().subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({

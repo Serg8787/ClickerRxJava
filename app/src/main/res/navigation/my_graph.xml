@@ -38,7 +38,11 @@
         <action
             android:id="@+id/action_competionFragment_to_playGameFragment"
             app:destination="@id/playGameFragment" />
-        <argument android:name="count" />
+        <argument android:name="count"
+            app:argType="integer" />
+        <argument
+            android:name="countLevel"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/hallOfFameFragment"

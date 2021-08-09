@@ -7,8 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_new_competion.*
 import java.util.*
 
@@ -18,7 +16,7 @@ import java.util.*
  * create an instance of this fragment.
  */
 class CompetionFragment : Fragment() {
-    var count = 0
+    var countLevel = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,19 +35,19 @@ class CompetionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btSprint1Distance10sec.setOnClickListener {
-            count = 10
+            countLevel = 10
             btSprint1Distance10sec.isEnabled = true
             btLongDistanse30sec.isEnabled = false
             btMiddleDistance20sec.isEnabled = false
         }
         btMiddleDistance20sec.setOnClickListener {
-            count = 20
+            countLevel = 20
             btSprint1Distance10sec.isEnabled = false
             btLongDistanse30sec.isEnabled = false
             btMiddleDistance20sec.isEnabled = true
         }
         btLongDistanse30sec.setOnClickListener {
-            count = 30
+            countLevel = 30
             btSprint1Distance10sec.isEnabled = false
             btLongDistanse30sec.isEnabled = true
             btMiddleDistance20sec.isEnabled = false
@@ -57,12 +55,10 @@ class CompetionFragment : Fragment() {
 
         btStart.setOnClickListener {
             val args = Bundle().apply {
-                putInt("countLevel",count)
+                putInt("countLevel",countLevel)
             }
            findNavController().navigate(R.id.action_competionFragment_to_playGameFragment,args)
             Log.d("MyLog",args.toString())
-
-
         }
 
 
