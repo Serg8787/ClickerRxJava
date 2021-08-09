@@ -36,14 +36,16 @@ class PlayGameFragment : Fragment() {
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvThreeToStart.text = it
                 if(tvThreeToStart.text.equals("")){
-                    tvTimer.text = "00 :" + countLevel
                     val timer = ThreeToStart().getSeconds(countLevel).subscribeOn(Schedulers.newThread())
                         .observeOn(AndroidSchedulers.mainThread()).subscribe({
-                            tvTimer.text = "00" + it.toString()
+                            tvTimer.text = "00 : " + it.toString()
                             Log.d("MyLog",it.toString())
                             clRoot.setOnClickListener {
                                 countResult++
                                 Log.d("MyLOGG",countResult.toString())
+                            }
+                            if (tvTimer.text.equals("00 : 0")){
+                                tvResult.text = countResult.toString()
                             }
                         })
 
