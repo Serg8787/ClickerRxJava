@@ -31,6 +31,9 @@ class PlayGameFragment : Fragment() {
         var countResult:Int = 0
 
 
+
+
+
         val ThreeToStart =ThreeToStart().getStr().subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvThreeToStart.text = it
@@ -45,13 +48,17 @@ class PlayGameFragment : Fragment() {
                             }
                             clRoot.setOnClickListener {
                                 countResult++
+                                Log.d("MyLog",countResult.toString())
                             }
                             if (tvTimer.text.equals("00 : 00")){
                                 tvResult.visibility = View.VISIBLE
                                 tvResult.text ="Your result\n${countResult}"
-                                val prefs = context?.getSharedPreferences("result",Context.MODE_PRIVATE)
-                                prefs?.edit()?.putInt("result",countResult)
-                                Log.d("MyLog",countResult.toString())
+                                val sharedPreferences = context?.getSharedPreferences("shared",Context.MODE_PRIVATE)
+                                val editor = sharedPreferences?.edit()
+                                editor.apply {
+                                    this!!.putInt("result",countResult)
+                                }?.apply()
+
                             }
                         })
                 }
