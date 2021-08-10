@@ -12,13 +12,19 @@
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_hallOfFameFragment"
-            app:destination="@id/hallOfFameFragment" />
+            app:destination="@id/hallOfFameFragment"
+            app:enterAnim="@anim/anim_frag"
+            app:exitAnim="@anim/anim_frag" />
         <action
             android:id="@+id/action_mainFragment_to_aboutDeveloperFragment"
-            app:destination="@id/aboutDeveloperFragment" />
+            app:destination="@id/aboutDeveloperFragment"
+            app:enterAnim="@anim/anim_frag"
+            app:exitAnim="@anim/anim_frag" />
         <action
             android:id="@+id/action_mainFragment_to_competionFragment"
-            app:destination="@id/competionFragment" />
+            app:destination="@id/competionFragment"
+            app:enterAnim="@anim/anim_frag"
+            app:exitAnim="@anim/anim_frag" />
     </fragment>
     <fragment
         android:id="@+id/aboutDeveloperFragment"
@@ -51,7 +57,9 @@
         tools:layout="@layout/fragment_hall_of_fame" >
         <action
             android:id="@+id/action_hallOfFameFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/anim_frag"
+            app:exitAnim="@anim/anim_frag" />
     </fragment>
     <fragment
         android:id="@+id/playGameFragment"
