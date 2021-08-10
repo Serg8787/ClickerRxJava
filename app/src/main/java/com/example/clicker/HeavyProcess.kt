@@ -10,24 +10,28 @@ import io.reactivex.internal.operators.observable.ObservableCreate
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_new_competion.*
 
-class ThreeToStart {
-    fun getStr(): Observable<String> {
+class HeavyProcess {
+
+    fun getStrTimer(): Observable<String> {
         return ObservableCreate { subcrumber ->
-            val s = arrayListOf ("3","2","1","Start","")
+            val s = arrayListOf ("3","2","1","Start",
+                "00:10",
+                "00:09",
+                "00:08",
+                "00:07",
+                "00:06",
+                "00:05",
+                "00:04",
+                "00:03",
+                "00:02",
+                "00:01",
+                "00:00",
+            )
             for ((i,value ) in s.withIndex()) {
                 subcrumber.onNext(value)
                 SystemClock.sleep(1000)
             }
         }
     }
-    fun getSeconds(seconds:Int): Observable<Int> {
-        return ObservableCreate { subcrumber ->
-            for (i in seconds downTo 0) {
-                subcrumber.onNext(i)
-                SystemClock.sleep(1000)
-            }
-        }
-    }
-
 
 }
