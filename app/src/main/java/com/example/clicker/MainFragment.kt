@@ -15,13 +15,9 @@ import kotlinx.android.synthetic.main.fragment_main.*
  * create an instance of this fragment.
  */
 class MainFragment : Fragment() {
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

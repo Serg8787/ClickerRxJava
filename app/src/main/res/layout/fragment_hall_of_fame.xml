@@ -10,28 +10,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clSprinRecord"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="52dp"
-        android:background="@drawable/back_record_sprint"
+        android:background="@drawable/back_fiolet"
         android:padding="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/tvRecordAllSpint"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="4dp"
-            android:text="Records of Sprint"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
         <TextView
             android:id="@+id/tvRecordSprint1"
             android:layout_width="0dp"
@@ -39,97 +25,67 @@
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:padding="5dp"
-            android:text="0"
+            android:text="Sprint Record\n0"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@id/tvRecordAllSpint"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@id/tvRecordAllSpint"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordAllSpint" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clMiddleRecord"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="176dp"
-        android:background="@drawable/back_record_middle"
+        android:background="@drawable/back_green"
         android:padding="5dp"
         app:layout_constraintStart_toStartOf="@+id/clSprinRecord"
         app:layout_constraintTop_toTopOf="@+id/clSprinRecord">
-
-
-        <TextView
-            android:id="@+id/tvRecordAllMiddle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:padding="4dp"
-            android:text="Records of Middle"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvRecordMiddle1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:gravity="center"
             android:padding="5dp"
-            android:text="0"
+            android:text="Middle Record\n0"
             android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordAllMiddle" />
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clLongRecord"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="172dp"
-        android:background="@drawable/back_record_long"
-
+        android:background="@drawable/back_yellow"
         android:padding="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/clMiddleRecord">
-
-
-        <TextView
-            android:id="@+id/tvRecordAllLong"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:padding="4dp"
-            android:text="Records of Long"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvRecordLong1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:gravity="center"
             android:padding="5dp"
-            android:text="0"
+            android:text="Long Record\n0"
             android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvRecordAllLong" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
