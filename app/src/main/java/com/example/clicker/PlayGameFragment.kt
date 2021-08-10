@@ -7,8 +7,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -35,11 +33,9 @@ class PlayGameFragment : Fragment() {
 
         HeavyProcess().getStrTimer().subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread()).subscribe ({
-                tvThreeToStart.text = it
-                if (it.equals("Start")) {
-                    tvThreeToStart.background = resources.getDrawable(R.drawable.back_yellow)
-                }
+                tvStartTimer.text = it
                 if (it.equals("00:10")) {
+                    tvStartTimer.background = resources.getDrawable(R.drawable.back_record_long)
                     clRoot.setOnClickListener {
                         countResult++
                         Log.d("MyLog", countResult.toString())
@@ -68,7 +64,7 @@ class PlayGameFragment : Fragment() {
                     }
                 }
                 if (it.equals("00:00")) {
-                    tvThreeToStart.visibility = View.GONE
+                    tvStartTimer.visibility = View.GONE
                     tvResult.visibility = View.VISIBLE
                     tvResult.text = "Your result\n${countResult}"
                 }
