@@ -34,7 +34,7 @@ class HallOfFameFragment : Fragment() {
         val resultSprint: Int? = prefsSprint?.getInt("resultSprint",0)
         Log.d("MyLog",resultSprint.toString())
          if(resultSprint!=null && resultSprint > tvRecordSprint1.text.toString().toInt()){
-             tvRecordSprint1.text = resultSprint.toString()
+             tvRecordSprint1.text = "${resultSprint}"
          }
 
 
@@ -43,7 +43,7 @@ class HallOfFameFragment : Fragment() {
         val resultMiddle: Int? = prefsMiddle?.getInt("resultMiddle",0)
         Log.d("MyLog",resultMiddle.toString())
         if(resultMiddle!=null && resultMiddle > tvRecordMiddle1.text.toString().toInt()){
-            tvRecordMiddle1.text = resultMiddle.toString()
+            tvRecordMiddle1.text = "${resultMiddle}"
         }
 
         val prefsLong =
@@ -51,7 +51,7 @@ class HallOfFameFragment : Fragment() {
         val resultLong: Int? = prefsLong?.getInt("resultLong",0)
         Log.d("MyLog",resultLong.toString())
         if(resultLong!=null && resultLong > tvRecordLong1.text.toString().toInt()){
-            tvRecordLong1.text = resultLong.toString()
+            tvRecordLong1.text ="${resultLong}"
         }
 
 
