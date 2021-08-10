@@ -31,9 +31,6 @@ class PlayGameFragment : Fragment() {
         var countResult:Int = 0
 
 
-
-
-
         val ThreeToStart =ThreeToStart().getStr().subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvThreeToStart.text = it
@@ -48,7 +45,6 @@ class PlayGameFragment : Fragment() {
                             }
                             clRoot.setOnClickListener {
                                 countResult++
-                                Log.d("MyLog",countResult.toString())
                             }
                             if (tvTimer.text.equals("00 : 00")){
                                 tvResult.visibility = View.VISIBLE

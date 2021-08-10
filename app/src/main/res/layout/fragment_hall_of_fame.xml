@@ -39,61 +39,12 @@
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Sprint1"
+            android:text="0"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="@id/tvRecordAllSpint"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@id/tvRecordAllSpint"
             app:layout_constraintTop_toBottomOf="@+id/tvRecordAllSpint" />
-
-        <TextView
-            android:id="@+id/tvRecordSprint2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Sprint2"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvRecordSprint1"
-            app:layout_constraintStart_toStartOf="@+id/tvRecordSprint1"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordSprint1" />
-
-        <TextView
-            android:id="@+id/tvRecordSprint3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Sprint3"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordSprint2" />
-
-        <TextView
-            android:id="@+id/tvRecordSprint4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Sprint4"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvRecordSprint3"
-            app:layout_constraintStart_toStartOf="@+id/tvRecordSprint3"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordSprint3" />
-
-        <TextView
-            android:id="@+id/tvRecordSprint5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Sprint5"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvRecordSprint4"
-            app:layout_constraintStart_toStartOf="@+id/tvRecordSprint4"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordSprint4" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -136,54 +87,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvRecordAllMiddle" />
 
-        <TextView
-            android:id="@+id/tvRecordMiddle2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Middle2"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordMiddle1" />
 
-        <TextView
-            android:id="@+id/tvRecordMiddle3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Middle3"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordMiddle2" />
-
-        <TextView
-            android:id="@+id/tvRecordMiddle4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Middle4"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordMiddle3" />
-
-        <TextView
-            android:id="@+id/tvRecordMiddle5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Middle5"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordMiddle4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -227,55 +131,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvRecordAllLong" />
 
-        <TextView
-            android:id="@+id/tvRecordLong2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Long2"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordLong1" />
-
-        <TextView
-            android:id="@+id/tvRecordLong3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Long3"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordLong2" />
-
-        <TextView
-            android:id="@+id/tvRecordLong4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Long4"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordLong3" />
-
-        <TextView
-            android:id="@+id/tvRecordLong5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Long5"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRecordLong4" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

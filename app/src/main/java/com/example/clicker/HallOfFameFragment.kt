@@ -16,11 +16,8 @@ import kotlinx.android.synthetic.main.fragment_hall_of_fame.*
  * create an instance of this fragment.
  */
 class HallOfFameFragment : Fragment() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+        super.onCreate(savedInstanceState)    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,10 +29,15 @@ class HallOfFameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var prefs = context?.getSharedPreferences("shared", Context.MODE_PRIVATE)
-        val result:String = prefs?.getInt("result",2).toString()
-        Log.d("MyLog",result)
-        tvRecordSprint1.text = result
+        val prefs = context?.getSharedPreferences("shared", Context.MODE_PRIVATE)
+        val result: Int? = prefs?.getInt("result",2)
+        Log.d("MyLog",result.toString())
+         if(result!=null && result > tvRecordSprint1.text.toString().toInt()){
+             tvRecordSprint1.text = result.toString()
+         }
+
+
+
 
 
     }
