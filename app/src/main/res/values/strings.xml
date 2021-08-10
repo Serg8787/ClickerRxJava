@@ -2,7 +2,7 @@
     <string name="app_name">Clicker</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="nter_level">Выберите уровень :</string>
+    <string name="nter_level">Select Level:</string>
     <string name="sprint_n_10sec">Sprint\n 10sec</string>
     <string name="middle_n20_sec">Middle\n20 sec</string>
     <string name="long_n30_sec">Long\n30 sec</string>
