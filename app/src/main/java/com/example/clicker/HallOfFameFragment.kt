@@ -29,12 +29,30 @@ class HallOfFameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val prefs = context?.getSharedPreferences("shared", Context.MODE_PRIVATE)
-        val result: Int? = prefs?.getInt("result",2)
-        Log.d("MyLog",result.toString())
-         if(result!=null && result > tvRecordSprint1.text.toString().toInt()){
-             tvRecordSprint1.text = result.toString()
+
+        val prefsSprint = context?.getSharedPreferences("sharedSprint", Context.MODE_PRIVATE)
+        val resultSprint: Int? = prefsSprint?.getInt("resultSprint",0)
+        Log.d("MyLog",resultSprint.toString())
+         if(resultSprint!=null && resultSprint > tvRecordSprint1.text.toString().toInt()){
+             tvRecordSprint1.text = resultSprint.toString()
          }
+
+
+        val prefsMiddle =
+            context?.getSharedPreferences("sharedMiddle", Context.MODE_PRIVATE)
+        val resultMiddle: Int? = prefsMiddle?.getInt("resultMiddle",0)
+        Log.d("MyLog",resultMiddle.toString())
+        if(resultMiddle!=null && resultMiddle > tvRecordMiddle1.text.toString().toInt()){
+            tvRecordMiddle1.text = resultMiddle.toString()
+        }
+
+        val prefsLong =
+            context?.getSharedPreferences("sharedLong", Context.MODE_PRIVATE)
+        val resultLong: Int? = prefsLong?.getInt("resultLong",0)
+        Log.d("MyLog",resultLong.toString())
+        if(resultLong!=null && resultLong > tvRecordLong1.text.toString().toInt()){
+            tvRecordLong1.text = resultLong.toString()
+        }
 
 
 

@@ -49,12 +49,25 @@ class PlayGameFragment : Fragment() {
                             if (tvTimer.text.equals("00 : 00")){
                                 tvResult.visibility = View.VISIBLE
                                 tvResult.text ="Your result\n${countResult}"
-                                val sharedPreferences = context?.getSharedPreferences("shared",Context.MODE_PRIVATE)
-                                val editor = sharedPreferences?.edit()
-                                editor.apply {
-                                    this!!.putInt("result",countResult)
-                                }?.apply()
-
+                                if(countLevel==10){
+                                    val sharedPreferences = context?.getSharedPreferences("sharedSprint",Context.MODE_PRIVATE)
+                                    val editor = sharedPreferences?.edit()
+                                    editor.apply {
+                                        this!!.putInt("resultSprint",countResult)
+                                    }?.apply()
+                                } else if ( countLevel == 20){
+                                    val sharedPreferences = context?.getSharedPreferences("sharedMiddle",Context.MODE_PRIVATE)
+                                    val editor = sharedPreferences?.edit()
+                                    editor.apply {
+                                        this!!.putInt("resultMiddle",countResult)
+                                    }?.apply()
+                                } else {
+                                    val sharedPreferences = context?.getSharedPreferences("sharedLong",Context.MODE_PRIVATE)
+                                    val editor = sharedPreferences?.edit()
+                                    editor.apply {
+                                        this!!.putInt("resultLong",countResult)
+                                    }?.apply()
+                                }
                             }
                         })
                 }
