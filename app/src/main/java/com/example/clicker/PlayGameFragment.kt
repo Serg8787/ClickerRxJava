@@ -64,6 +64,7 @@ class PlayGameFragment : Fragment() {
                     }
                 }
                 if (it.equals("00:00")) {
+                    clRoot.isEnabled = false
                     tvStartTimer.visibility = View.GONE
                     tvResult.visibility = View.VISIBLE
                     tvResult.text = "Your result\n${countResult}"
