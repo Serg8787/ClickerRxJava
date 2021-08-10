@@ -31,34 +31,27 @@ class HallOfFameFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val prefsSprint = context?.getSharedPreferences("sharedSprint", Context.MODE_PRIVATE)
-        val resultSprint: Int? = prefsSprint?.getInt("resultSprint",0)
-        Log.d("MyLog",resultSprint.toString())
-         if(resultSprint!=null && resultSprint > tvRecordSprint1.text.toString().toInt()){
-             tvRecordSprint1.text = "${resultSprint}"
-         }
+        val resultSprint: Int? = prefsSprint?.getInt("resultSprint", 0)
+        if (resultSprint != null && resultSprint > tvRecordSprint1.text.toString().toInt()) {
+            tvRecordSprint1.text = "${resultSprint}"
+
+            }
 
 
-        val prefsMiddle =
-            context?.getSharedPreferences("sharedMiddle", Context.MODE_PRIVATE)
-        val resultMiddle: Int? = prefsMiddle?.getInt("resultMiddle",0)
-        Log.d("MyLog",resultMiddle.toString())
-        if(resultMiddle!=null && resultMiddle > tvRecordMiddle1.text.toString().toInt()){
-            tvRecordMiddle1.text = "${resultMiddle}"
+            val prefsMiddle =
+                context?.getSharedPreferences("sharedMiddle", Context.MODE_PRIVATE)
+            val resultMiddle: Int? = prefsMiddle?.getInt("resultMiddle", 0)
+            if (resultMiddle != null && resultMiddle > tvRecordMiddle1.text.toString().toInt()) {
+                tvRecordMiddle1.text = "${resultMiddle}"
+            }
+
+            val prefsLong =
+                context?.getSharedPreferences("sharedLong", Context.MODE_PRIVATE)
+            val resultLong: Int? = prefsLong?.getInt("resultLong", 0)
+            if (resultLong != null && resultLong > tvRecordLong1.text.toString().toInt()) {
+                tvRecordLong1.text = "${resultLong}"
+            }
+
+
         }
-
-        val prefsLong =
-            context?.getSharedPreferences("sharedLong", Context.MODE_PRIVATE)
-        val resultLong: Int? = prefsLong?.getInt("resultLong",0)
-        Log.d("MyLog",resultLong.toString())
-        if(resultLong!=null && resultLong > tvRecordLong1.text.toString().toInt()){
-            tvRecordLong1.text ="${resultLong}"
-        }
-
-
-
-
-
     }
-
-
-}
