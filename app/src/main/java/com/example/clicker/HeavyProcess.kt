@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.fragment_new_competion.*
 class HeavyProcess {
 
     fun getStrTimer(): Observable<String> {
-        return ObservableCreate { subcrumber ->
+        return ObservableCreate ({ subcrumber ->
             val s = arrayListOf ("3","2","1","Start",
                 "00:10",
                 "00:09",
@@ -31,7 +31,7 @@ class HeavyProcess {
                 subcrumber.onNext(value)
                 SystemClock.sleep(1000)
             }
-        }
+        })
     }
 
 }

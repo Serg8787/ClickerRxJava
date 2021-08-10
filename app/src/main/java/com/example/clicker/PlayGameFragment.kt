@@ -7,6 +7,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -25,14 +27,14 @@ class PlayGameFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_play_game, container, false)
     }
 
-    @SuppressLint("CommitPrefEdits")
+    @SuppressLint("CommitPrefEdits", "CheckResult")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val countLevel: Int = requireArguments().get("countLevel").toString().toInt()
         var countResult: Int = 0
 
-        val start = HeavyProcess().getStrTimer().subscribeOn(Schedulers.newThread())
-            .observeOn(AndroidSchedulers.mainThread()).subscribe {
+        HeavyProcess().getStrTimer().subscribeOn(Schedulers.newThread())
+            .observeOn(AndroidSchedulers.mainThread()).subscribe ({
                 tvThreeToStart.text = it
                 if (it.equals("Start")) {
                     tvThreeToStart.background = resources.getDrawable(R.drawable.back_yellow)
@@ -69,6 +71,8 @@ class PlayGameFragment : Fragment() {
                     tvResult.visibility = View.VISIBLE
                     tvResult.text = "Your result\n${countResult}"
                 }
-            }
+            },{
+                Log.d("MyLog","Mistake")
+            })
     }
 }

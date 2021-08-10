@@ -60,6 +60,11 @@
         tools:layout="@layout/fragment_play_game" >
         <action
             android:id="@+id/action_playGameFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_playGameFragment_to_mainFragment2"
             app:destination="@id/mainFragment" />
     </fragment>
 </navigation>

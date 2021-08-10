@@ -70,17 +70,17 @@
             android:id="@+id/btLongDistanse30sec"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:background="@drawable/back_green"
-            android:backgroundTint="@android:color/holo_blue_bright"
+            android:layout_marginBottom="168dp"
+            android:background="@drawable/back_fiolet"
             android:gravity="center"
             android:padding="4dp"
+            android:text="Long\n30 sec"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:text="Long\n30 sec"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.289"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btMiddleDistance20sec" />
+            app:layout_constraintHorizontal_bias="0.243"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/btStart"

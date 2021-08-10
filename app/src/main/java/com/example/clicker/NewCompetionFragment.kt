@@ -57,7 +57,7 @@ class CompetionFragment : Fragment() {
             tvLevel.visibility = GONE
             btStart.visibility = VISIBLE
             btSprint1Distance10sec.visibility = GONE
-            btLongDistanse30sec.visibility = GONE
+            btMiddleDistance20sec.visibility = GONE
             btLongDistanse30sec.isEnabled = true
         }
 
