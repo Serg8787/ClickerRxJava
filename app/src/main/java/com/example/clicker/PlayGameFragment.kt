@@ -67,7 +67,7 @@ class PlayGameFragment : Fragment() {
                     clRoot.isEnabled = false
                     tvStartTimer.visibility = View.GONE
                     tvResult.visibility = View.VISIBLE
-                    tvResult.text = "Your result\n${countResult}"
+                    tvResult.text = "Your\nresult\n${countResult}"
                 }
             },{
                 Log.d("MyLog","Mistake")
