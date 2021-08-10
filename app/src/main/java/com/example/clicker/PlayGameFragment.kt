@@ -69,8 +69,29 @@ class PlayGameFragment : Fragment() {
                     tvStartTimer.visibility = View.GONE
                     tvResult.visibility = View.VISIBLE
                     tvResult.text = "Your\nresult\n${countResult}"
-
-
+                    if(countLevel==10){
+                        val prefsSprint = context?.getSharedPreferences("sharedSprintNew", Context.MODE_PRIVATE)
+                        val resultSprintNew: Int? = prefsSprint?.getInt("resultSprintNew", 0)
+                        if(countResult> resultSprintNew!!){
+                            tvNewRecord.visibility = View.VISIBLE
+                        }
+                    }
+                    if(countLevel==20) {
+                        val prefsSprint =
+                            context?.getSharedPreferences("sharedMiddleNew", Context.MODE_PRIVATE)
+                        val resultMiddleNew: Int? = prefsSprint?.getInt("resultMiddleNew", 0)
+                        if (countResult > resultMiddleNew!!) {
+                            tvNewRecord.visibility = View.VISIBLE
+                        }
+                    }
+                    if(countLevel==30){
+                        val prefsSprint =
+                            context?.getSharedPreferences("sharedLongNew", Context.MODE_PRIVATE)
+                        val resultLongNew: Int? = prefsSprint?.getInt("resultLongNew", 0)
+                        if (countResult > resultLongNew!!) {
+                            tvNewRecord.visibility = View.VISIBLE
+                        }
+                    }
                 }
             },{
                 Log.d("MyLog","Mistake")

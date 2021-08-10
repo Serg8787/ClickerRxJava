@@ -34,15 +34,26 @@ class HallOfFameFragment : Fragment() {
         val resultSprint: Int? = prefsSprint?.getInt("resultSprint", 0)
         if (resultSprint != null && resultSprint > tvRecordSprint1.text.toString().toInt()) {
             tvRecordSprint1.text = "${resultSprint}"
-
+            val newRecordSprint = tvRecordSprint1.text.toString().toInt()
+            val sharedPreferences =
+                context?.getSharedPreferences("sharedSprintNew", Context.MODE_PRIVATE)
+            val editor = sharedPreferences?.edit()
+            editor.apply {
+                this!!.putInt("resultSprintNew", newRecordSprint)
+            }?.apply()
             }
-
-
             val prefsMiddle =
                 context?.getSharedPreferences("sharedMiddle", Context.MODE_PRIVATE)
             val resultMiddle: Int? = prefsMiddle?.getInt("resultMiddle", 0)
             if (resultMiddle != null && resultMiddle > tvRecordMiddle1.text.toString().toInt()) {
                 tvRecordMiddle1.text = "${resultMiddle}"
+                val newRecordMiddle = tvRecordMiddle1.text.toString().toInt()
+                val sharedPreferences =
+                    context?.getSharedPreferences("sharedMiddleNew", Context.MODE_PRIVATE)
+                val editor = sharedPreferences?.edit()
+                editor.apply {
+                    this!!.putInt("resultMiddleNew", newRecordMiddle)
+                }?.apply()
             }
 
             val prefsLong =
@@ -50,8 +61,13 @@ class HallOfFameFragment : Fragment() {
             val resultLong: Int? = prefsLong?.getInt("resultLong", 0)
             if (resultLong != null && resultLong > tvRecordLong1.text.toString().toInt()) {
                 tvRecordLong1.text = "${resultLong}"
+                val newRecordLong = tvRecordLong1.text.toString().toInt()
+                val sharedPreferences =
+                    context?.getSharedPreferences("sharedLongNew", Context.MODE_PRIVATE)
+                val editor = sharedPreferences?.edit()
+                editor.apply {
+                    this!!.putInt("resultLongNew", newRecordLong)
+                }?.apply()
             }
-
-
         }
     }
