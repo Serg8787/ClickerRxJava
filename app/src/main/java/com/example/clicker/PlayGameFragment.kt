@@ -55,6 +55,28 @@ class PlayGameFragment : Fragment() {
                 clRoot.setOnClickListener {
                     countResult++
                     Log.d("MyLog", countResult.toString())
+                    if (countLevel == 10) {
+                        val sharedPreferences =
+                            context?.getSharedPreferences("sharedSprint", Context.MODE_PRIVATE)
+                        val editor = sharedPreferences?.edit()
+                        editor.apply {
+                            this!!.putInt("resultSprint", countResult)
+                        }?.apply()
+                    } else if (countLevel == 20) {
+                        val sharedPreferences =
+                            context?.getSharedPreferences("sharedMiddle", Context.MODE_PRIVATE)
+                        val editor = sharedPreferences?.edit()
+                        editor.apply {
+                            this!!.putInt("resultMiddle", countResult)
+                        }?.apply()
+                    } else {
+                        val sharedPreferences =
+                            context?.getSharedPreferences("sharedLong", Context.MODE_PRIVATE)
+                        val editor = sharedPreferences?.edit()
+                        editor.apply {
+                            this!!.putInt("resultLong", countResult)
+                        }?.apply()
+                    }
                 }
 
 //                if (tvTimer.text.equals("00:00")) {
@@ -92,7 +114,7 @@ class PlayGameFragment : Fragment() {
 
             })
     }
-    fun setShared(){
+//    fun setShared(){
 //        if (countLevel == 10) {
 //            val sharedPreferences =
 //                context?.getSharedPreferences("sharedSprint", Context.MODE_PRIVATE)
@@ -116,4 +138,3 @@ class PlayGameFragment : Fragment() {
 //            }?.apply()
 //        }
     }
-}
