@@ -70,75 +70,9 @@ class PlayGameFragment : Fragment() {
                             }?.apply()
                         }
                     }
-//                    else if (countLevel == 20) {
-//                        val sharedPreferences =
-//                            context?.getSharedPreferences("sharedMiddle", Context.MODE_PRIVATE)
-//                        val editor = sharedPreferences?.edit()
-//                        editor.apply {
-//                            this!!.putInt("resultMiddle", countResult)
-//                        }?.apply()
-//                    } else {
-//                        val sharedPreferences =
-//                            context?.getSharedPreferences("sharedLong", Context.MODE_PRIVATE)
-//                        val editor = sharedPreferences?.edit()
-//                        editor.apply {
-//                            this!!.putInt("resultLong", countResult)
-//                        }?.apply()
-//                    }
                 }
 
-//                if (tvTimer.text.equals("00:00")) {
-//                    clRoot.isEnabled = false
-//                    tvTimer.visibility = View.GONE
-//                    tvResult.visibility = View.VISIBLE
-//                    tvResult.text = "Your\nresult\n${countResult}"
-//                    if(countLevel==10){
-//
-//                    }
-//                    if(countLevel==20) {
-//                        val prefsSprint =
-//                            context?.getSharedPreferences("sharedMiddleNew", Context.MODE_PRIVATE)
-//                        val resultMiddleNew: Int? = prefsSprint?.getInt("resultMiddleNew", 0)
-//                        if (countResult > resultMiddleNew!!) {
-//                            tvNewRecord.visibility = View.VISIBLE
-//                        }
-//                    }
-//                    if(countLevel==30){
-//                        val prefsSprint =
-//                            context?.getSharedPreferences("sharedLongNew", Context.MODE_PRIVATE)
-//                        val resultLongNew: Int? = prefsSprint?.getInt("resultLongNew", 0)
-//                        if (countResult > resultLongNew!!) {
-//                            tvNewRecord.visibility = View.VISIBLE
-//                        }
-//                    }
-//                }
-
-            }, {
-                Log.d("MyLog", "Mistake")
-
-            })
+            }, { Log.d("MyLog", "Mistake")})
     }
-//    fun setShared(){
-//        if (countLevel == 10) {
-//            val sharedPreferences =
-//                context?.getSharedPreferences("sharedSprint", Context.MODE_PRIVATE)
-//            val editor = sharedPreferences?.edit()
-//            editor.apply {
-//                this!!.putInt("resultSprint", countResult)
-//            }?.apply()
-//        } else if (countLevel == 20) {
-//            val sharedPreferences =
-//                context?.getSharedPreferences("sharedMiddle", Context.MODE_PRIVATE)
-//            val editor = sharedPreferences?.edit()
-//            editor.apply {
-//                this!!.putInt("resultMiddle", countResult)
-//            }?.apply()
-//        } else {
-//            val sharedPreferences =
-//                context?.getSharedPreferences("sharedLong", Context.MODE_PRIVATE)
-//            val editor = sharedPreferences?.edit()
-//            editor.apply {
-//                this!!.putInt("resultLong", countResult)
-//            }?.apply()
-//        }
+
 }
