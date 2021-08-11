@@ -61,7 +61,7 @@ class PlayGameFragment : Fragment() {
                         val resultSprintNew: Int? = prefsSprint?.getInt("resultSprintNew", 0)
                         if (countResult > resultSprintNew!!) {
                             tvNewRecord.visibility = View.VISIBLE
-                            tvNewRecord.text = countResult.toString()
+                            tvNewRecord.text ="New Record ${countResult}"
                             val sharedPreferences =
                                 context?.getSharedPreferences("sharedSprint", Context.MODE_PRIVATE)
                             val editor = sharedPreferences?.edit()
