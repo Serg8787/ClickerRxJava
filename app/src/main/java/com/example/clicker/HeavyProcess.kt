@@ -27,8 +27,4 @@ class HeavyProcess {
         }
     }
 
-    fun stop() {
-        HeavyProcess().stop()
-    }
-
 }
