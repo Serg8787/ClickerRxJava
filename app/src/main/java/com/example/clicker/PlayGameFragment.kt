@@ -1,7 +1,9 @@
 package com.example.clicker
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,15 +38,46 @@ class PlayGameFragment : Fragment() {
                     tvThreeToStart.visibility = View.GONE
                 }
             })
-
         HeavyProcess().getSeconds(countLevel).subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvTimer.visibility = View.VISIBLE
-                    if (it < 10) {
-                        tvTimer.text = "00 : 0$it"
+                    if (it < 10) { tvTimer.text = "00 : 0$it"}
+                    else {tvTimer.text = "00 : $it"}
+
+
+                clRoot.setOnClickListener {
+                    countResult++
+                    Log.d("MyLog", countResult.toString())
+
+                    if (countLevel == 10) {
+                        val sharedPreferences =
+                            context?.getSharedPreferences("sharedSprint", Context.MODE_PRIVATE)
+                        val editor = sharedPreferences?.edit()
+                        editor.apply {
+                            this!!.putInt("resultSprint", countResult)
+                        }?.apply()
+                    } else if (countLevel == 20) {
+                        val sharedPreferences =
+                            context?.getSharedPreferences("sharedMiddle", Context.MODE_PRIVATE)
+                        val editor = sharedPreferences?.edit()
+                        editor.apply {
+                            this!!.putInt("resultMiddle", countResult)
+                        }?.apply()
                     } else {
-                        tvTimer.text = "00 : $it"
+                        val sharedPreferences =
+                            context?.getSharedPreferences("sharedLong", Context.MODE_PRIVATE)
+                        val editor = sharedPreferences?.edit()
+                        editor.apply {
+                            this!!.putInt("resultLong", countResult)
+                        }?.apply()
                     }
+
+                }
+
+    },{
+        Log.d("MyLog","Mistake")
+
+
 
             })
     }
