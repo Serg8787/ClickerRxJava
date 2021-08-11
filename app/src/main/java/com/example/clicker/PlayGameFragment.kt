@@ -44,9 +44,9 @@ class PlayGameFragment : Fragment() {
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvThreeToStart.text = it
                 if (tvThreeToStart.text.equals("")) {
-                    tvThreeToStart.visibility = View.GONE
-                }
-            })
+                    tvThreeToStart.visibility = View.GONE }
+            },{Log.d("MyLog", "Mistake") })
+
         HeavyProcess().getSeconds(countLevel).subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvTimer.visibility = View.VISIBLE
@@ -87,7 +87,7 @@ class PlayGameFragment : Fragment() {
                             }?.apply()
                         }
                     } else {
-                        if (countResult > resultMiddleNew!!) {
+                        if (countResult > resultLongNew!!) {
                             tvNewRecord.visibility = View.VISIBLE
                             tvNewRecord.text ="New Record ${countResult}"
                             val sharedPreferences =

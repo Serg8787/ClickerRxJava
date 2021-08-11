@@ -66,13 +66,11 @@
         android:textStyle="bold"
         android:visibility="gone"
         android:fontFamily="@font/archivo_black"
-        android:textColor="@color/black"
+        android:textColor="@android:color/holo_red_light"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
