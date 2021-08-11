@@ -34,17 +34,18 @@ class PlayGameFragment : Fragment() {
         HeavyProcess().getThreeToStart().subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvThreeToStart.text = it
-                if (tvThreeToStart.text.equals("Start")) {
+                if (tvThreeToStart.text.equals("")) {
                     tvThreeToStart.visibility = View.GONE
                 }
             })
         HeavyProcess().getSeconds(countLevel).subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvTimer.visibility = View.VISIBLE
-                    if (it < 10) { tvTimer.text = "00 : 0$it"}
-                    else {tvTimer.text = "00 : $it"}
-
-
+                if (it < 10) {
+                    tvTimer.text = "00 : 0$it"
+                } else {
+                    tvTimer.text = "00 : $it"
+                }
                 clRoot.setOnClickListener {
                     countResult++
                     Log.d("MyLog", countResult.toString())
@@ -74,10 +75,8 @@ class PlayGameFragment : Fragment() {
 
                 }
 
-    },{
-        Log.d("MyLog","Mistake")
-
-
+            }, {
+                Log.d("MyLog", "Mistake")
 
             })
     }

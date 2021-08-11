@@ -9,7 +9,7 @@ class HeavyProcess {
 
     fun getThreeToStart(): Observable<String> {
         return ObservableCreate { subcrumber ->
-            val s = arrayListOf("3", "2", "1", "Start")
+            val s = arrayListOf("3", "2", "1", "Start","")
             for ((i, value) in s.withIndex()) {
                 subcrumber.onNext(value)
                 SystemClock.sleep(1000)
@@ -19,7 +19,7 @@ class HeavyProcess {
 
     fun getSeconds(seconds: Int): Observable<Int> {
         return ObservableCreate { subcrumber ->
-            SystemClock.sleep(3000)
+            SystemClock.sleep(4000)
             for (i in seconds downTo 0) {
                 subcrumber.onNext(i)
                 SystemClock.sleep(1000)
