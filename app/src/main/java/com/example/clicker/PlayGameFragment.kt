@@ -31,6 +31,15 @@ class PlayGameFragment : Fragment() {
         val countLevel: Int = requireArguments().get("countLevel").toString().toInt()
         var countResult: Int = 0
 
+        val prefsSprint = context?.getSharedPreferences("sharedSprintNew", Context.MODE_PRIVATE)
+        val resultSprintNew: Int? = prefsSprint?.getInt("resultSprintNew", 0)
+
+        val prefsMiddle = context?.getSharedPreferences("sharedMiddleNew", Context.MODE_PRIVATE)
+        val resultMiddleNew: Int? = prefsMiddle?.getInt("resultMiddleNew", 0)
+
+        val prefsLong = context?.getSharedPreferences("sharedLongNew", Context.MODE_PRIVATE)
+        val resultLongNew: Int? = prefsLong?.getInt("resultLongNew", 0)
+
         HeavyProcess().getThreeToStart().subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread()).subscribe({
                 tvThreeToStart.text = it
@@ -46,7 +55,7 @@ class PlayGameFragment : Fragment() {
                 } else {
                     tvTimer.text = "00 : $it"
                 }
-                if (tvTimer.text.equals("00 : 00")) {
+                if (tvTimer.text.equals(getString(R.string.null_time))) {
                     tvTimer.visibility = View.GONE
                     clRoot.isEnabled = false
                     tvResult.visibility = View.VISIBLE
@@ -56,9 +65,6 @@ class PlayGameFragment : Fragment() {
                     countResult++
                     Log.d("MyLog", countResult.toString())
                     if (countLevel == 10) {
-                        val prefsSprint =
-                            context?.getSharedPreferences("sharedSprintNew", Context.MODE_PRIVATE)
-                        val resultSprintNew: Int? = prefsSprint?.getInt("resultSprintNew", 0)
                         if (countResult > resultSprintNew!!) {
                             tvNewRecord.visibility = View.VISIBLE
                             tvNewRecord.text ="New Record ${countResult}"
@@ -67,6 +73,28 @@ class PlayGameFragment : Fragment() {
                             val editor = sharedPreferences?.edit()
                             editor.apply {
                                 this!!.putInt("resultSprint", countResult)
+                            }?.apply()
+                        }
+                    } else if(countLevel==20){
+                        if (countResult > resultMiddleNew!!) {
+                            tvNewRecord.visibility = View.VISIBLE
+                            tvNewRecord.text ="New Record ${countResult}"
+                            val sharedPreferences =
+                                context?.getSharedPreferences("sharedMiddle", Context.MODE_PRIVATE)
+                            val editor = sharedPreferences?.edit()
+                            editor.apply {
+                                this!!.putInt("resultMiddle", countResult)
+                            }?.apply()
+                        }
+                    } else {
+                        if (countResult > resultMiddleNew!!) {
+                            tvNewRecord.visibility = View.VISIBLE
+                            tvNewRecord.text ="New Record ${countResult}"
+                            val sharedPreferences =
+                                context?.getSharedPreferences("sharedLong", Context.MODE_PRIVATE)
+                            val editor = sharedPreferences?.edit()
+                            editor.apply {
+                                this!!.putInt("resultLong", countResult)
                             }?.apply()
                         }
                     }
