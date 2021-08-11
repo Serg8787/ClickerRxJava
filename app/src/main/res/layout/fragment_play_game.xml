@@ -1,37 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/clRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/selectable_item_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/holo_blue_light"
+    android:id="@+id/clRoot"
     tools:context=".PlayGameFragment">
 
 
     <TextView
-        android:id="@+id/tvStartTimer"
+        android:id="@+id/tvThreeToStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:background="@drawable/back_fiolet"
         android:gravity="center"
-        android:textColor="@color/black"
         android:textSize="50sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tvTimer"
+        android:textSize="50sp"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="4dp"
+        android:layout_marginTop="40dp"
+        android:visibility="gone"
+        android:background="@drawable/back_record_long"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
         android:id="@+id/tvResult"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:background="@drawable/back_blue"
-        android:fontFamily="@font/archivo_black"
+        android:background="@drawable/back_green"
         android:gravity="center"
-        android:textColor="@color/black"
         android:textSize="30sp"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,20 +53,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/tvNewRecord"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="New Record"
-        android:textSize="40sp"
-        android:gravity="center"
-        android:visibility="gone"
-        android:layout_marginBottom="30dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/archivo_black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
